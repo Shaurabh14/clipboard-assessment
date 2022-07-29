@@ -16,40 +16,57 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
 ## Your Breakdown Here
 
+
 Ticket 1
+
     - TASK:
       - Update schema of database to include new column `custom_agent_id`. The new column should have a unique constraint.
+      
     - ACCEPTANCE CRITERION:
       - Nullable (if optional) varchar custom_agent_id column should be included in Agent's table.
+      
     - IMPLEMENTATION DETAILS:
       - As a facility I should have an ability to save a custom id for each agent, so that when the report is generated I can match the customId with the internal records, This will require database migration.
+      
     - STORY POINT/ESTIMATION: 1 Hour
 
 Ticket 2
+
     - TASK:
       - Add input where facilities can enter custom agent id for each agent
+      
     - ACCEPTANCE CRITERION:
       - Input field to accept the alphanumeric values for custom agent id
       - After user enters the values and clicks on SAVE, the custom agent id should be saved in the database
+      
     - IMPLEMENTATION DETAILS:
       - Input field in the UI with an ability to enter alphanumeric valued for custom agent id.
+      
     - STORY POINT/ESTIMATION: 6 Hours
 
 Ticket 3
+
     - TASK:
       - Update method `getShiftsByfacility` to include custom Id.
+      
     - ACCEPTANCE CRITERION:
       - getShiftsByFacility should include the custom agent id on agent object.
+      
     - IMPLEMENTATION DETAILS:
       - Refactor existing function in a way when it's called for generating reports, we have to include the custom id entered by the facility of any particular agent.
+      
     - STORY POINT/ESTIMATION: 4 Hours
 
 Ticket 4
+
     - TASK: 
       - Update `generateReport` to include custom agent id on it's return value
+      
     - ACCEPTANCE CRITERION:
       - generateReport should have custom agent id on each agent
       - generated PDF should show the custom id for each agent.
+      
     - IMPLEMENTATION DETAILS:
       - Refactor existing generateReport method to include the shift and agent metadata information while generating the report.
+      
     - STORY POINT/ESTIMATION: 4 Hours
