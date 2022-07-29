@@ -9,3 +9,8 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+- Removed the If-else statement with ternary operator to decrease the time complexity of the code
+- Create a separate hash method as a utility so that we call it wherever we need it, this will prevent repeating of code.
+
+- It is more readable because we have less code and less overlap.
